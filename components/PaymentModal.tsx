@@ -39,12 +39,14 @@ const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose, packageNam
     };
 
     // Bank Info (Replace with your actual info)
-    const bankInfo = {
-        bankName: "MB Bank",
-        accountNum: "0899xxxxxx", // Thay số tài khoản của bạn
-        accountName: "NGUYEN VAN A", // Thay tên của bạn
-        amount: price ? price.replace(/\D/g, '') : '9900000',
-        content: `AI ${formData.phone}`
+   const bankInfo = {
+    bankName: "MB Bank",
+    accountNum: "676666776666",
+    accountName: "PHAM LE HAI",
+    amount: price ? price.replace(/\D/g, '') : "0",
+    content: `AIBOS - ${formData.name} - ${formData.phone}`,
+};
+
     };
 
     // VietQR Link generation
