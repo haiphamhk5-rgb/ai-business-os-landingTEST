@@ -49,8 +49,11 @@ const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose, packageNam
 
     };
 
-    // VietQR Link generation
-    const qrLink = `https://img.vietqr.io/image/${bankInfo.bankName}-${bankInfo.accountNum}-compact2.jpg?amount=${bankInfo.amount}&addInfo=${bankInfo.content}&accountName=${bankInfo.accountName}`;
+   // VietQR Link generation (MB Bank - 970422)
+const qrLink = `https://img.vietqr.io/image/970422-${bankInfo.accountNum}-compact2.jpg?amount=${bankInfo.amount}&addInfo=${encodeURIComponent(
+  bankInfo.content
+)}`;
+
 
     return (
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
